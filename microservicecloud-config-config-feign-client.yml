@@ -1,0 +1,49 @@
+﻿spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: microservicecloud-config-config-feign-client
+server:
+  port: 9001
+  
+
+feign: 
+  hystrix: 
+    enabled: true
+
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka/  
+     # defaultZ
+     
+     
+---
+spring:
+  profiles: test
+  application:
+    name: microservicecloud-config-config-feign-client
+server:
+  port: 9002
+  
+
+feign: 
+  hystrix: 
+    enabled: true
+
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka/  
+     # defaultZ     
+     
+ 
